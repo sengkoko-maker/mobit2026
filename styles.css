@@ -113,7 +113,7 @@ img{max-width:100%}
 .detail-card ul{padding-left:20px}
 .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}
 .portrait{position:relative;overflow:hidden;border-radius:24px}
-.portrait>img{width:100%;height:660px;object-fit:cover;object-position:50% 20%;display:block}
+.portrait>img{width:100%;height:auto;object-fit:contain;object-position:center top;display:block}
 .portrait-caption{position:absolute;left:0;right:0;bottom:0;padding:20px 26px;background:rgba(6,41,94,.94);color:#fff}
 .portrait-caption b,.portrait-caption span{display:block}
 .portrait-caption b{font-size:25px}
@@ -375,13 +375,6 @@ footer{padding:32px 20px 90px}
 
 .welcome-panel{position:relative;z-index:2;width:min(610px,48vw);margin:0 auto;padding:92px 32px 52px;text-align:center}
 
-.penang-mark{position:relative;display:block;width:210px;height:118px;margin:0 auto 12px;filter:drop-shadow(0 12px 22px rgba(2,24,58,.32))}
-.penang-cn{position:relative;display:block;width:100%;height:118px;color:#fff;font-family:"Arial Black","Microsoft YaHei",sans-serif;font-size:82px;font-weight:900;line-height:.86;letter-spacing:-.12em}
-.penang-cn b{position:absolute}
-.penang-cn b:first-child{left:0;top:0;transform:rotate(-4deg)}
-.penang-cn b:last-child{right:3px;bottom:0;color:var(--orange);transform:rotate(4deg)}
-.penang-cn b:last-child:after{content:"";position:absolute;right:-12px;bottom:4px;width:42px;height:7px;border-radius:999px;background:var(--orange);transform:rotate(-8deg)}
-
 .welcome-panel .eyebrow{color:#c7e0ff}
 .welcome-panel h1{margin:0;font-size:clamp(42px,4.7vw,68px);line-height:1.02;letter-spacing:-.05em}
 .welcome-panel h1 span{color:#fff}
@@ -435,8 +428,6 @@ footer{padding:32px 20px 90px}
 .welcome-bg{object-position:center top}
 .welcome-hero:after{background:linear-gradient(180deg,rgba(6,41,94,.1) 0%,rgba(6,41,94,.9) 52%,var(--navy) 100%)}
 .welcome-panel{width:100%;padding:390px 20px 42px}
-.penang-mark{width:170px;height:96px;margin-bottom:10px}
-.penang-cn{height:96px;font-size:66px}
 .welcome-panel .trust{grid-template-columns:1fr 1fr 1fr}
 .welcome-panel .trust div{padding:0 7px}
 .welcome-panel .trust span{font-size:10px}
@@ -623,7 +614,7 @@ border:3px solid var(--orange);border-radius:var(--radius);background:#fff;box-s
   padding:0;
   background:var(--blue);
 }
-.portrait img{width:100%;height:100%;margin:0;object-fit:cover;object-position:50% 20%;display:block}
+.portrait img{width:100%;height:auto;margin:0;object-fit:contain;object-position:center top;display:block}
 
 @media(max-width:700px){
   .welcome-hero{margin:12px 12px 0;min-height:780px}
