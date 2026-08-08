@@ -10,8 +10,7 @@ document.querySelectorAll('.wa-quote').forEach(a=>{a.href=waLink(quoteMessage);a
 document.querySelectorAll('.wa-appointment').forEach(a=>{a.href=waLink(appointmentMessage);a.target='_blank';a.rel='noopener noreferrer'});
 const pageName=location.pathname.split('/').pop()||'index.html';
 const showCtas=pageName==='index.html'||pageName==='contact.html';
-if(showCtas){const quickActions=document.createElement('div');quickActions.className='quick-actions';quickActions.setAttribute('aria-label','Quick WhatsApp actions');quickActions.innerHTML='<a href="'+waLink(quoteMessage)+'" target="_blank" rel="noopener noreferrer">WhatsApp Quotation</a><a href="'+waLink(appointmentMessage)+'" target="_blank" rel="noopener noreferrer">Service Appointment</a>';document.body.appendChild(quickActions)}
-else document.querySelectorAll('.btn,.nav-cta,.wa').forEach(el=>el.remove());
+if(!showCtas) document.querySelectorAll('.btn,.nav-cta,.wa').forEach(el=>el.remove());
 
 const zh={
 'Home':'首页','Products':'产品','Solutions':'解决方案','Services':'服务','Projects':'项目','Coverage':'服务地区','About':'关于我们','Contact':'联系我们','WhatsApp Us':'WhatsApp 联系','SYSTEM INTEGRATOR':'系统整合商',
@@ -53,6 +52,6 @@ function setLanguage(lang){
  document.querySelectorAll('body *:not(script):not(style)').forEach(el=>[...el.childNodes].filter(n=>n.nodeType===3&&n.nodeValue.trim()).forEach(n=>{if(!original.has(n))original.set(n,n.nodeValue);const base=original.get(n),key=base.trim();n.nodeValue=lang==='zh'&&zh[key]?base.replace(key,zh[key]):lang==='en'&&enSimple[key]?base.replace(key,enSimple[key]):base}));
  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));localStorage.setItem('mobit-lang',lang)
 }
-const box=document.createElement('div');box.className='language-switch';box.innerHTML='<button class="lang-btn" data-lang="en">EN</button><span>/</span><button class="lang-btn" data-lang="zh">中文</button>';document.querySelector('.nav-cta')?.before(box);box.addEventListener('click',e=>{const b=e.target.closest('.lang-btn');if(b)setLanguage(b.dataset.lang)});setLanguage(localStorage.getItem('mobit-lang')||'en');
+const box=document.createElement('div');box.className='language-switch';box.innerHTML='<button class="lang-btn" data-lang="en">EN</button><span>/</span><button class="lang-btn" data-lang="zh">中文</button>';document.querySelector('.menu')?.before(box);box.addEventListener('click',e=>{const b=e.target.closest('.lang-btn');if(b)setLanguage(b.dataset.lang)});setLanguage(localStorage.getItem('mobit-lang')||'en');
 
 const form=document.querySelector('#booking-form');if(form){const date=form.querySelector('[name="date"]');if(date)date.min=new Date().toISOString().split('T')[0];form.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(form),lines=['Hi Mobit Solution, I would like to book a service appointment.','',`Name: ${d.get('name')}`,`Company: ${d.get('company')||'-'}`,`Contact: ${d.get('phone')}`,`System / Service: ${d.get('service')}`,`Preferred date: ${d.get('date')}`,`Preferred time: ${d.get('time')}`,`Location: ${d.get('location')}`,`Problem / Request: ${d.get('problem')||'-'}`,'','Please confirm whether this schedule is available. Thank you.'];window.open('https://wa.me/60124769358?text='+encodeURIComponent(lines.join('\n')),'_blank','noopener,noreferrer')})}
