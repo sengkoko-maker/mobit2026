@@ -139,6 +139,7 @@ img{max-width:100%}
 .booking button{border:0;cursor:pointer;margin-top:22px}
 .booking small{display:block;margin-top:12px;color:var(--muted)}
 footer{padding:36px max(5vw,24px);display:grid;grid-template-columns:1fr 1fr 1fr;align-items:center;gap:20px}
+.footer-four{grid-template-columns:minmax(330px,1.25fr) minmax(290px,1fr) minmax(350px,1.3fr) minmax(190px,.7fr)}
 footer p{margin:0;text-align:center;color:var(--muted);font-size:12px}
 footer p:last-child{text-align:right}
 .wa{position:fixed;right:22px;bottom:22px;width:60px;height:60px;border-radius:50%;border:4px solid #fff;background:#16a34a;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;box-shadow:0 12px 28px rgba(0,0,0,.22);z-index:60}
@@ -157,6 +158,7 @@ footer p:last-child{text-align:right}
 .final{grid-template-columns:1fr}
 .coverage-grid{grid-template-columns:1fr}
 footer{grid-template-columns:1fr;justify-items:center}
+.footer-four{grid-template-columns:1fr}
 footer p:last-child{text-align:center}
 }
 
@@ -373,6 +375,13 @@ footer{padding:32px 20px 90px}
 
 .welcome-panel{position:relative;z-index:2;width:min(610px,48vw);margin:0 auto;padding:92px 32px 52px;text-align:center}
 
+.penang-mark{display:inline-flex;align-items:center;gap:12px;margin:0 auto 16px;padding:7px 13px 7px 9px;border:1px solid rgba(255,255,255,.32);border-radius:13px;background:rgba(6,41,94,.48);box-shadow:0 10px 28px rgba(6,25,58,.18);backdrop-filter:blur(7px)}
+.penang-cn{position:relative;display:block;width:48px;height:42px;color:#fff;font-size:25px;font-weight:900;line-height:1}
+.penang-cn b{position:absolute}
+.penang-cn b:first-child{left:0;top:0}
+.penang-cn b:last-child{right:0;bottom:0;color:#ff9d2e}
+.penang-en{color:#fff;font-size:10px;font-weight:900;letter-spacing:.16em;white-space:nowrap}
+
 .welcome-panel .eyebrow{color:#c7e0ff}
 .welcome-panel h1{margin:0;font-size:clamp(42px,4.7vw,68px);line-height:1.02;letter-spacing:-.05em}
 .welcome-panel h1 span{color:#fff}
@@ -426,6 +435,7 @@ footer{padding:32px 20px 90px}
 .welcome-bg{object-position:center top}
 .welcome-hero:after{background:linear-gradient(180deg,rgba(6,41,94,.1) 0%,rgba(6,41,94,.9) 52%,var(--navy) 100%)}
 .welcome-panel{width:100%;padding:390px 20px 42px}
+.penang-mark{margin-bottom:13px;transform:scale(.92)}
 .welcome-panel .trust{grid-template-columns:1fr 1fr 1fr}
 .welcome-panel .trust div{padding:0 7px}
 .welcome-panel .trust span{font-size:10px}
