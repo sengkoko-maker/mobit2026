@@ -468,7 +468,7 @@ footer{padding:32px 20px 90px}
 .project-photos{flex:0 0 340px;height:340px;display:grid;grid-template-columns:1fr 1fr;gap:3px;background:var(--line)}
 .project-photos.single-photo{grid-template-columns:1fr}
 .project-photos.single-photo img{object-fit:contain;background:#eef3f8}
-.project-photos img{width:100%;height:100%;object-fit:cover;display:block}
+.project-photos img{width:100%;height:100%;object-fit:contain;display:block;background:#eef3f8}
 .project-card:nth-child(1) .project-photos img:first-child{object-position:center 42%}
 .project-card:nth-child(2) .project-photos img:first-child{object-position:center}
 .project-card:nth-child(3) .project-photos img{object-position:center 35%}
