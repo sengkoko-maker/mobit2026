@@ -12,6 +12,19 @@ const pageName=location.pathname.split('/').pop()||'index.html';
 const showCtas=pageName==='index.html'||pageName==='contact.html';
 if(!showCtas) document.querySelectorAll('.btn,.nav-cta,.wa').forEach(el=>el.remove());
 
+const mobileNavItems=[
+ ['index.html','⌂','Home'],
+ ['products.html','▦','Solutions'],
+ ['services.html','⚙','Services'],
+ ['projects.html','▣','Projects'],
+ ['contact.html','✆','Contact']
+];
+const mobileBar=document.createElement('nav');
+mobileBar.className='mobile-quick-nav';
+mobileBar.setAttribute('aria-label','Quick mobile navigation');
+mobileBar.innerHTML=mobileNavItems.map(([href,icon,label])=>`<a href="${href}"${pageName===href?' class="active" aria-current="page"':''}><b aria-hidden="true">${icon}</b><span>${label}</span></a>`).join('');
+document.body.appendChild(mobileBar);
+
 const zh={
 'Home':'首页','Products':'产品','Solutions':'解决方案','Services':'服务','Projects':'项目','Coverage':'服务地区','About':'关于我们','Contact':'联系我们','WhatsApp Us':'WhatsApp 联系','SYSTEM INTEGRATOR':'系统整合商',
 'PENANG IT & SECURITY SYSTEM INTEGRATOR':'槟城 IT 与保安系统整合商','One Partner.':'一个伙伴。','Complete Systems.':'完整系统。','Built to Last.':'稳定耐用。','We plan, supply, install and support your IT, networking, CCTV, alarm, door access and ANPR systems as one connected solution.':'我们为企业规划、供应、安装及维护 IT、网络、CCTV、警报、门禁和 ANPR 系统，让所有系统稳定配合。','Get Free Onsite Assessment':'预约免费现场评估','Explore Our Systems':'查看我们的系统','Since 2003':'自 2003 年','Industry experience':'行业经验','Local Team':'本地团队','Fast Penang support':'槟城快速支援','One Integrator':'一个整合商','Plan · Install · Integrate':'规划 · 安装 · 整合',
