@@ -15,8 +15,8 @@ if(!showCtas) document.querySelectorAll('.btn,.nav-cta,.wa').forEach(el=>el.remo
 const mobileNavItems=[
  ['index.html','⌂','Home'],
  ['products.html','▦','Solutions'],
- ['services.html','⚙','Services'],
  ['projects.html','▣','Projects'],
+ ['about.html','ⓘ','About'],
  ['contact.html','✆','Contact']
 ];
 const mobileBar=document.createElement('nav');
