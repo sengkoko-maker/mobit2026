@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mobit Solution Website Preview</title>
+  <style>
+    :root{font-family:Inter,Arial,sans-serif;color:#10233f;background:#eef3f8}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh}
+    .toolbar{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 24px;background:#072b59;color:#fff;box-shadow:0 4px 18px #071f3b2b}
+    .brand{font-size:15px;font-weight:800;letter-spacing:.03em}
+    .controls{display:flex;align-items:center;gap:8px;padding:5px;background:#fff1;border:1px solid #ffffff26;border-radius:12px}
+    button{border:0;border-radius:8px;padding:9px 15px;background:transparent;color:#fff;font:inherit;font-weight:750;cursor:pointer}
+    button.active{background:#f58220;box-shadow:0 3px 10px #0002}
+    .stage{display:flex;justify-content:center;align-items:flex-start;padding:28px;min-height:calc(100vh - 70px);overflow:auto}
+    .device{width:min(1440px,100%);height:calc(100vh - 126px);min-height:620px;background:#fff;border:10px solid #162439;border-radius:18px;overflow:hidden;box-shadow:0 22px 55px #10233f2c;transition:width .28s ease,border-radius .28s ease}
+    .device.mobile{width:390px;max-width:100%;height:780px;border-radius:34px;border-width:12px}
+    iframe{display:block;width:100%;height:100%;border:0;background:#fff}
+    @media(max-width:600px){.toolbar{padding:12px;gap:8px;flex-wrap:wrap}.brand{width:100%;text-align:center}.controls{margin:auto}.stage{padding:14px}.device{min-height:600px;height:calc(100vh - 126px);border-width:6px}.device.mobile{border-width:7px}}
+  </style>
+</head>
+<body>
+  <header class="toolbar">
+    <div class="brand">MOBIT SOLUTION (PENANG) · WEBSITE PREVIEW</div>
+    <div class="controls" role="group" aria-label="Preview device">
+      <button type="button" class="active" data-view="pc" aria-pressed="true">▣ PC View</button>
+      <button type="button" data-view="mobile" aria-pressed="false">▯ Mobile View</button>
+    </div>
+  </header>
+  <main class="stage">
+    <div class="device" id="device">
+      <iframe src="index.html" title="Mobit Solution website preview"></iframe>
+    </div>
+  </main>
+  <script>
+    const device=document.querySelector('#device');
+    document.querySelectorAll('[data-view]').forEach(button=>button.addEventListener('click',()=>{
+      const mobile=button.dataset.view==='mobile';
+      device.classList.toggle('mobile',mobile);
+      document.querySelectorAll('[data-view]').forEach(item=>{
+        const active=item===button;
+        item.classList.toggle('active',active);
+        item.setAttribute('aria-pressed',String(active));
+      });
+    }));
+  </script>
+</body>
+</html>
