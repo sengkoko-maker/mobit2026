@@ -14,7 +14,7 @@
     <img src="assets/mobit-logo.webp" alt="Mobit Solution">
     <span><b>MOBIT SOLUTION (PENANG)</b><small>BUSINESS TECHNOLOGY PARTNER</small></span>
   </a>
-  <button class="modern-menu" aria-label="Open menu" aria-expanded="false">☰</button>
+  <button class="modern-menu" aria-label="Open navigation menu" aria-expanded="false"><span>MENU</span><b aria-hidden="true">☰</b></button>
   <nav class="modern-nav">
     <a class="active" href="index.html">Home</a><a href="products.html">Solutions</a><a href="services.html">Services</a><a href="projects.html">Projects</a><a href="coverage.html">Coverage</a><a href="about.html">About</a><a href="contact.html">Contact</a>
   </nav>
@@ -72,7 +72,6 @@
   <p>© 2026 Mobit Solution (Penang)</p>
 </footer>
 <script src="script.js"></script>
-<script>const m=document.querySelector('.modern-menu'),n=document.querySelector('.modern-nav');m?.addEventListener('click',()=>{n.classList.toggle('open');m.setAttribute('aria-expanded',n.classList.contains('open'))});</script>
+<script>const m=document.querySelector('.modern-menu'),n=document.querySelector('.modern-nav');function closeMobileMenu(){n?.classList.remove('open');m?.setAttribute('aria-expanded','false');m?.querySelector('b')&&(m.querySelector('b').textContent='☰');document.body.classList.remove('menu-open')}m?.addEventListener('click',()=>{const open=!n.classList.contains('open');n.classList.toggle('open',open);m.setAttribute('aria-expanded',String(open));m.querySelector('b').textContent=open?'×':'☰';document.body.classList.toggle('menu-open',open)});n?.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMobileMenu));document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMobileMenu()});</script>
 </body>
 </html>
-
