@@ -59,6 +59,10 @@ Object.assign(zh,{
  'WELCOME · ABOUT MOBIT':'欢迎 · 认识 MOBIT','Since 2003, Penang businesses have trusted us to supply, install and support their IT, network and security systems.':'自 2003 年，我们为槟城企业供应、安装及支援 IT、网络和保安系统。','Meet Our Team':'联系我们团队',
  "WELCOME · LET'S GET STARTED":'欢迎 · 让我们开始','Choose quotation or service appointment. WhatsApp us your details and we will reply with the next step.':'选择报价或服务预约，通过 WhatsApp 提交资料，我们会回复下一步。','Request Quotation':'索取报价','Book Service':'预约服务','WhatsApp Quotation':'WhatsApp 报价','Service Appointment':'服务预约'
 });
+Object.assign(zh,{
+ 'Business Alarm Systems':'商业防盗警报系统','Choose HIKVISION with Hik-Connect app control, Vivos with convenient remotes, or an expandable Paradox system for commercial premises.':'可选择支持 Hik-Connect 手机应用的 HIKVISION、方便遥控操作的 Vivos，或适合商业场所扩充的 Paradox 系统。',
+ 'COMMERCIAL CCTV MONITORING':'商业 CCTV 集中监控','One screen. Complete site visibility.':'一个屏幕，集中掌握现场情况。','We configured a multi-camera CCTV monitoring system so the customer can review important areas from one central display.':'我们配置多摄像头 CCTV 监控系统，让客户可通过一个中央屏幕查看重要区域。','The completed setup provides clearer day-to-day oversight and makes camera checking more convenient. All live views shown here are blurred to protect the customer’s location, people and activities.':'完成后的系统让日常监控和摄像头检查更方便。画面已进行模糊处理，以保护客户地点、人员和活动隐私。'
+});
 const original=new WeakMap();
 function setLanguage(lang){
  document.documentElement.lang=lang==='zh'?'zh-Hans':'en';
