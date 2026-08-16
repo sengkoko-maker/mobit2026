@@ -486,8 +486,9 @@ footer{padding:32px 20px 90px}
 .project-photos.single-photo img{object-fit:contain;background:#eef3f8}
 .project-photos.office-cabling-photos{grid-template-columns:repeat(5,1fr);grid-template-rows:1fr}
 .project-photos.office-cabling-photos img{object-fit:cover;object-position:center}
-.project-photos.recon-photos{grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(2,1fr)}
+.project-photos.recon-photos{grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr)}
 .project-photos.recon-photos img{object-fit:cover;object-position:center}
+.project-photos.recon-photos img:last-child{grid-column:3;grid-row:1 / span 2}
 .project-photos.access-photos{grid-template-columns:repeat(3,1fr);grid-template-rows:1fr}
 .project-photos.access-photos img{object-fit:cover;object-position:center}
 .project-photos.cctv-installation-photos{grid-template-columns:repeat(2,1fr);grid-template-rows:1fr}
