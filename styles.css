@@ -493,6 +493,8 @@ footer{padding:32px 20px 90px}
 .project-photos.access-photos img{object-fit:cover;object-position:center}
 .project-photos.cctv-installation-photos{grid-template-columns:repeat(2,1fr);grid-template-rows:1fr}
 .project-photos.cctv-installation-photos img{object-fit:cover;object-position:center}
+.project-photos.cafe-renovation-photos{grid-template-columns:repeat(3,1fr);grid-template-rows:1fr}
+.project-photos.cafe-renovation-photos img{object-fit:cover;object-position:center}
 .project-photos.outskirt-cctv-photos{grid-template-columns:repeat(3,1fr);grid-template-rows:1fr}
 .project-photos.outskirt-cctv-photos img{object-fit:cover;object-position:center}
 .project-photos.warehouse-wifi-photos{grid-template-columns:repeat(3,1fr);grid-template-rows:1fr}
