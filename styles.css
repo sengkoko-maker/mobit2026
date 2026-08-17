@@ -5,8 +5,16 @@ body{margin:0;color:var(--ink);background:#fff;font-family:Arial,Helvetica,sans-
 a{color:inherit;text-decoration:none}
 img{max-width:100%}
 .header{height:84px;padding:0 max(5vw,24px);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}
-.brand{display:flex;align-items:center;gap:12px}
-.brand img{width:56px;height:56px;border-radius:50%;object-fit:cover}
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{width:60px;height:60px;border-radius:50%;object-fit:cover;image-rendering:auto;filter:contrast(1.12) saturate(1.12) drop-shadow(0 7px 12px rgba(5,37,83,.24))}
+.header .brand{position:relative;animation:brandReveal .8s cubic-bezier(.2,.8,.2,1) both}
+.header .brand:before{content:"";position:absolute;left:-5px;top:50%;width:68px;height:68px;border-radius:50%;border:1px solid rgba(214,163,62,.65);box-shadow:0 0 0 1px rgba(9,64,136,.16),0 0 20px rgba(214,163,62,.22);transform:translateY(-50%);pointer-events:none;animation:brandRing 3.4s ease-in-out infinite}
+.header .brand:after{content:"";position:absolute;left:6px;top:8px;width:46px;height:14px;border-radius:50%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.88),transparent);transform:rotate(-28deg) translateX(-40px);filter:blur(1px);pointer-events:none;animation:brandShine 4s 1s ease-in-out infinite}
+.header .brand-text{animation:brandTextReveal .75s .18s cubic-bezier(.2,.8,.2,1) both}
+@keyframes brandReveal{from{opacity:0;transform:translateY(-10px) scale(.9)}to{opacity:1;transform:none}}
+@keyframes brandTextReveal{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:none}}
+@keyframes brandRing{0%,100%{opacity:.55;transform:translateY(-50%) scale(.96)}50%{opacity:1;transform:translateY(-50%) scale(1.05);box-shadow:0 0 0 1px rgba(9,64,136,.2),0 0 26px rgba(214,163,62,.38)}}
+@keyframes brandShine{0%,62%,100%{opacity:0;transform:rotate(-28deg) translateX(-40px)}72%{opacity:.9}84%{opacity:0;transform:rotate(-28deg) translateX(54px)}}
 .brand-text{display:flex;flex-direction:column;line-height:1}
 .brand-text b{font-size:17px;color:var(--navy);letter-spacing:.04em}
 .brand-text small{margin-top:6px;color:var(--blue);font-size:9px;font-weight:900;letter-spacing:.22em}
@@ -168,6 +176,8 @@ footer p:last-child{text-align:center}
 
 @media(max-width:620px){.header{height:72px;padding:0 18px}
 .brand img{width:44px;height:44px}
+.header .brand:before{left:-4px;width:50px;height:50px}
+.header .brand:after{left:3px;top:7px;width:38px}
 .brand-text b{font-size:13px}
 .brand-text small{font-size:7px}
 .nav{top:72px}
@@ -461,7 +471,7 @@ footer{padding:32px 20px 90px}
 .advisor-hero p:not(.eyebrow){font-size:16px}
 }
 
-@media(prefers-reduced-motion:reduce){.mini-solution span,.icon,.photo-icon{animation:none}
+@media(prefers-reduced-motion:reduce){.mini-solution span,.icon,.photo-icon,.header .brand,.header .brand-text,.header .brand:before,.header .brand:after{animation:none}
 }
 
 .whatsapp-actions .btn{min-height:50px}
