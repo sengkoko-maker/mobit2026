@@ -1,0 +1,35 @@
+/* Keep project galleries fully filled with no exposed card background. */
+.project-photos{
+  display:grid;
+  overflow:hidden;
+  background:#eef3f8 !important;
+}
+.project-photos img{
+  width:100% !important;
+  height:100% !important;
+  min-width:0;
+  min-height:0;
+  display:block;
+  object-fit:cover !important;
+  object-position:center !important;
+}
+.project-photos.recon-photos{
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  grid-template-rows:repeat(2,minmax(0,1fr)) !important;
+}
+.project-photos.access-photos,
+.project-photos.cafe-renovation-photos,
+.project-photos.outskirt-cctv-photos,
+.project-photos.warehouse-wifi-photos{
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  grid-template-rows:1fr !important;
+}
+.project-photos.office-cabling-photos{
+  grid-template-columns:repeat(5,minmax(0,1fr)) !important;
+}
+.project-photos.single-photo{
+  grid-template-columns:1fr !important;
+}
+.project-photos.single-photo img{
+  object-fit:cover !important;
+}
