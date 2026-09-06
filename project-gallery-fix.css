@@ -6,6 +6,9 @@
 .project-photos.office-cabling-photos{grid-template-columns:repeat(5,minmax(0,1fr)) !important;}
 .project-photos.single-photo{grid-template-columns:1fr !important;}
 .project-photos.single-photo img{object-fit:cover !important;}
+/* Server project: show the complete labelled composite without cropping. */
+.project-card:nth-child(2) .project-photos.single-photo{background:#111 !important;display:flex !important;align-items:center;justify-content:center;}
+.project-card:nth-child(2) .project-photos.single-photo img{width:100% !important;height:100% !important;object-fit:contain !important;object-position:center !important;}
 .project-photos.server-labelled{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:3px;background:#fff !important;}
 .server-shot{position:relative;overflow:hidden;min-width:0;}
 .server-shot img{width:100%;height:100%;object-fit:cover;}
