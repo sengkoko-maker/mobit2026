@@ -1,0 +1,27 @@
+/* Mobile inner-page hero spacing fix — 2026-09-08 */
+@media (max-width:700px){
+  /* Solutions + Contact advisor heroes: stop reserving a large portrait area above copy. */
+  .advisor-hero{
+    min-height:auto !important;
+    padding:32px 28px 42px !important;
+    background-size:cover !important;
+    background-position:center !important;
+  }
+  .advisor-hero-copy,
+  .advisor-left .advisor-hero-copy,
+  .advisor-right .advisor-hero-copy{
+    width:100% !important;
+    padding-top:0 !important;
+    margin:0 !important;
+  }
+  .advisor-badge{margin-bottom:26px}
+  .advisor-hero h1{font-size:clamp(42px,12vw,54px);line-height:1.02}
+  .advisor-hero-copy>p:not(.eyebrow){font-size:16px;line-height:1.6}
+
+  /* About + Projects: compact, content-driven mobile intro. */
+  .page-hero.about-intro,
+  .projects-intro{
+    min-height:auto !important;
+    padding:46px 24px 40px !important;
+  }
+}
