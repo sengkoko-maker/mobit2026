@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://mobitsolution.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://mobitsolution.com/products.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mobitsolution.com/it-support-penang.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mobitsolution.com/network-cabling-penang.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mobitsolution.com/cctv-installation-penang.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://mobitsolution.com/projects.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://mobitsolution.com/about.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://mobitsolution.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
