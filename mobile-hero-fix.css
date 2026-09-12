@@ -1,4 +1,20 @@
-/* Mobile inner-page hero spacing fix — 2026-09-08 */
+/* Inner-page hero sizing — 2026-09-12 */
+/* Desktop: reduce hero vertical size by about 50% on all inner pages. Home hero (.hero) is untouched. */
+@media (min-width:701px){
+  .advisor-hero{
+    min-height:360px !important;
+    padding-top:36px !important;
+    padding-bottom:36px !important;
+  }
+  .page-hero.about-intro,
+  .projects-intro{
+    min-height:auto !important;
+    padding-top:50px !important;
+    padding-bottom:50px !important;
+  }
+}
+
+/* Existing mobile inner-page hero spacing fix */
 @media (max-width:700px){
   /* Solutions + Contact advisor heroes: stop reserving a large portrait area above copy. */
   .advisor-hero{
