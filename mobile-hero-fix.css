@@ -1,16 +1,16 @@
 /* Inner-page hero sizing — 2026-09-12 */
-/* Desktop: reduce hero vertical size by about 50% on all inner pages. Home hero (.hero) is untouched. */
+/* Desktop: reduce current inner-page hero height by a further 30%. Home hero (.hero) is untouched. */
 @media (min-width:701px){
   .advisor-hero{
-    min-height:360px !important;
-    padding-top:36px !important;
-    padding-bottom:36px !important;
+    min-height:252px !important;
+    padding-top:25px !important;
+    padding-bottom:25px !important;
   }
   .page-hero.about-intro,
   .projects-intro{
     min-height:auto !important;
-    padding-top:50px !important;
-    padding-bottom:50px !important;
+    padding-top:35px !important;
+    padding-bottom:35px !important;
   }
 }
 
