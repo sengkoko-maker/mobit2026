@@ -8,6 +8,13 @@
   <link rel="stylesheet" href="styles.css?v=20260817-2">
 <link rel="icon" href="assets/mobit-logo.webp">
 <script src="analytics.js"></script>
+<style>
+.about-intro{position:relative;overflow:hidden;min-height:500px;padding-right:46%;display:flex;flex-direction:column;justify-content:center;background:#124a91}
+.about-intro:before{content:"";position:absolute;inset:0 0 0 42%;background:url('assets/mobit-ong-dark-blue-coat-20260808.webp?v=20260916-1') center 22%/cover no-repeat;z-index:0}
+.about-intro:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#124a91 0%,#124a91 40%,rgba(18,74,145,.82) 52%,rgba(18,74,145,.30) 72%,rgba(18,74,145,.08) 100%);z-index:1}
+.about-intro>*{position:relative;z-index:2}
+@media(max-width:850px){.about-intro{padding-right:8%;min-height:480px}.about-intro:before{inset:0;background-position:62% 20%}.about-intro:after{background:rgba(18,74,145,.72)}}
+</style>
 </head>
 <body>
 <header class="header">
