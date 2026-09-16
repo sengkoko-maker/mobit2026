@@ -47,7 +47,25 @@
 .server-shot .label.server{top:42%;right:7px;background:#0967df;border:2px solid #35a0ff;}
 .server-shot .label.ups{bottom:10px;left:8px;background:#ef7900;border:2px solid #ffad38;}
 .server-shot:after{content:"";position:absolute;inset:5px;border:2px solid rgba(229,43,43,.9);border-radius:4px;pointer-events:none;}
+/* Standard Mobit gold hero badge */
+.projects-intro .eyebrow{
+  display:inline-block !important;
+  width:max-content !important;
+  max-width:100% !important;
+  margin:0 0 28px !important;
+  padding:13px 18px !important;
+  border:1px solid #f1ca55 !important;
+  border-radius:9px !important;
+  background:linear-gradient(180deg,#fff1a8 0%,#ffe07a 100%) !important;
+  color:#17120a !important;
+  font-size:12px !important;
+  font-weight:900 !important;
+  letter-spacing:.03em !important;
+  line-height:1.2 !important;
+  box-shadow:0 7px 18px rgba(151,105,0,.20) !important;
+}
 @media(max-width:620px){
   .server-shot .label{font-size:10px;padding:4px 6px}
   .server-shot .label.server{top:45%;right:4px}
+  .projects-intro .eyebrow{margin-bottom:22px !important;padding:11px 14px !important;font-size:10px !important}
 }
