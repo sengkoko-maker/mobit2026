@@ -1,6 +1,7 @@
-const menu=document.querySelector('.menu'),nav=document.querySelector('.nav');
-if(menu&&nav)menu.addEventListener('click',()=>{nav.classList.toggle('open');menu.setAttribute('aria-expanded',nav.classList.contains('open'))});
-document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>nav?.classList.remove('open')));
+const menu=document.querySelector('.modern-menu'),nav=document.querySelector('.modern-nav');
+function closeMenu(){nav?.classList.remove('open');menu?.setAttribute('aria-expanded','false');if(menu?.querySelector('b'))menu.querySelector('b').textContent='☰';document.body.classList.remove('menu-open')}
+menu?.addEventListener('click',()=>{const open=!nav.classList.contains('open');nav.classList.toggle('open',open);menu.setAttribute('aria-expanded',String(open));menu.querySelector('b').textContent=open?'×':'☰';document.body.classList.toggle('menu-open',open)});
+nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
 
 const waNumber='60124769358';
 const waLink=message=>'https://wa.me/'+waNumber+'?text='+encodeURIComponent(message);
@@ -22,7 +23,7 @@ const mobileNavItems=[
 const mobileBar=document.createElement('nav');
 mobileBar.className='mobile-quick-nav';
 mobileBar.setAttribute('aria-label','Quick mobile navigation');
-mobileBar.innerHTML=mobileNavItems.map(([href,icon,label])=>`<a href="${href}"${pageName===href?' class="active" aria-current="page"':''}><b aria-hidden="true">${icon}</b><span>${label}</span></a>`).join('');
+mobileBar.innerHTML=mobileNavItems.map(([href,icon,label])=>`<a href="${href}"${(pageName===href||(href==='products.html'&&['it-support-penang.html','network-cabling-penang.html','cctv-installation-penang.html','alarm-system-penang.html','door-access-penang.html','anpr-system-penang.html'].includes(pageName)))?' class="active" aria-current="page"':''}><b aria-hidden="true">${icon}</b><span>${label}</span></a>`).join('');
 document.body.appendChild(mobileBar);
 
 const zh={
@@ -74,6 +75,6 @@ function setLanguage(lang){
  document.querySelectorAll('body *:not(script):not(style)').forEach(el=>[...el.childNodes].filter(n=>n.nodeType===3&&n.nodeValue.trim()).forEach(n=>{if(!original.has(n))original.set(n,n.nodeValue);const base=original.get(n),key=base.trim();n.nodeValue=lang==='zh'&&zh[key]?base.replace(key,zh[key]):lang==='en'&&enSimple[key]?base.replace(key,enSimple[key]):base}));
  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));localStorage.setItem('mobit-lang',lang)
 }
-const box=document.createElement('div');box.className='language-switch';box.innerHTML='<button class="lang-btn" data-lang="en">EN</button><span>/</span><button class="lang-btn" data-lang="zh">中文</button>';document.querySelector('.menu')?.before(box);box.addEventListener('click',e=>{const b=e.target.closest('.lang-btn');if(b)setLanguage(b.dataset.lang)});setLanguage(localStorage.getItem('mobit-lang')||'en');
+const box=document.createElement('div');box.className='language-switch';box.innerHTML='<button class="lang-btn" data-lang="en">EN</button><span>/</span><button class="lang-btn" data-lang="zh">中文</button>';document.querySelector('.modern-menu')?.before(box);box.addEventListener('click',e=>{const b=e.target.closest('.lang-btn');if(b)setLanguage(b.dataset.lang)});setLanguage(localStorage.getItem('mobit-lang')||'en');
 
 const form=document.querySelector('#booking-form');if(form){const date=form.querySelector('[name="date"]');if(date)date.min=new Date().toISOString().split('T')[0];form.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(form),lines=['Hi Mobit Solution, I would like to book a service appointment.','',`Name: ${d.get('name')}`,`Company: ${d.get('company')||'-'}`,`Contact: ${d.get('phone')}`,`System / Service: ${d.get('service')}`,`Preferred date: ${d.get('date')}`,`Preferred time: ${d.get('time')}`,`Location: ${d.get('location')}`,`Problem / Request: ${d.get('problem')||'-'}`,'','Please confirm whether this schedule is available. Thank you.'];window.open('https://wa.me/60124769358?text='+encodeURIComponent(lines.join('\n')),'_blank','noopener,noreferrer')})}
