@@ -101,3 +101,17 @@ body[data-page]:not([data-page="index.html"]):not([data-page="contact.html"]) .s
 .tech-intro{grid-template-columns:1fr}.tech-visual{min-height:260px}
 }
 @media(max-width:620px){body{padding-bottom:calc(105px + env(safe-area-inset-bottom))}.modern-nav{top:72px;height:calc(100dvh - 72px)}.modern-header .language-switch{margin-right:8px}.modern-brand b{font-size:clamp(10px,2.7vw,12px)}.modern-brand{gap:10px}.modern-footer{padding-bottom:32px}.mobile-quick-nav{font-family:Inter,Arial,sans-serif}}
+
+/* Compact spacing refinement - desktop and mobile, Oct 2026 */
+@media(min-width:701px){
+.section,.modern-section,.service-body{padding-top:60px;padding-bottom:60px}
+.advisor-hero,.advisor-hero.contact-standard-hero,.projects-intro,.tech-intro,.service-hero{min-height:380px!important;padding-top:50px!important;padding-bottom:50px!important}
+.home-simple-cta{padding-top:48px;padding-bottom:48px}
+.modern-footer{padding-top:24px;padding-bottom:24px}
+}
+@media(max-width:700px){
+.section,.modern-section,.service-body{padding-top:44px;padding-bottom:44px}
+.advisor-hero,.advisor-hero.contact-standard-hero,.projects-intro,.tech-intro,.service-hero{padding-top:38px!important;padding-bottom:38px!important}
+.home-simple-cta{padding-top:40px;padding-bottom:40px}
+}
+.section-head,.heading{margin-bottom:24px}
