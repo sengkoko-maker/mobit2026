@@ -115,3 +115,9 @@ body[data-page]:not([data-page="index.html"]):not([data-page="contact.html"]) .s
 .home-simple-cta{padding-top:40px;padding-bottom:40px}
 }
 .section-head,.heading{margin-bottom:24px}
+
+/* Final five-page visual refinements */
+.modern-header .modern-brand img,.modern-header .modern-brand span,.modern-header .modern-brand:before,.modern-header .modern-brand:after{animation:none!important;transform:none!important}
+.modern-header .modern-brand:before{transform:translateY(-50%)!important}
+@media(min-width:701px){.modern-hero{min-height:0!important;height:auto!important;max-height:none}.modern-hero .hero-copy{padding-top:32px!important;padding-bottom:32px!important}.modern-hero .proof{margin-top:24px!important}.solution-overview{padding-top:42px!important;padding-bottom:44px!important}.projects-page .recent-solutions{padding-top:28px!important}.projects-page .local-proof{margin-bottom:0!important}}
+@media(max-width:700px){.projects-page .recent-solutions{padding-top:22px!important}.projects-page .local-proof{margin-bottom:0!important}.solution-overview{padding-top:30px!important}}
