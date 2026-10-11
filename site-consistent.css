@@ -129,3 +129,28 @@ body[data-page="contact.html"] .contact-coverage .coverage-card h2{margin:10px 0
 body[data-page="contact.html"] .contact-coverage .coverage-card p{line-height:1.55!important}
 body[data-page="contact.html"] .contact-coverage{padding-bottom:36px!important}
 @media(max-width:700px){body[data-page="contact.html"] .contact-coverage .coverage-grid{grid-template-columns:1fr!important;gap:14px!important}body[data-page="contact.html"] .contact-coverage .coverage-card{padding:20px!important}body[data-page="contact.html"] .contact-coverage .coverage-card h2{font-size:23px}}
+
+/* Site-wide whitespace audit: keep readable content, remove oversized gaps */
+@media(min-width:701px){
+body[data-page="index.html"] .modern-section{padding-top:50px!important;padding-bottom:50px!important}
+body[data-page="index.html"] .mobit-testimonials{padding-top:48px!important;padding-bottom:48px!important}
+body[data-page="index.html"] .home-simple-cta{padding-top:40px!important;padding-bottom:40px!important}
+body[data-page="products.html"] .solution-overview{padding-top:34px!important;padding-bottom:34px!important}
+body[data-page="products.html"] .product-section{padding-top:46px!important;padding-bottom:46px!important}
+body[data-page="projects.html"] .recent-solutions{padding-top:22px!important;padding-bottom:46px!important}
+body[data-page="projects.html"] .local-proof{margin-bottom:0!important;padding-top:16px!important;padding-bottom:16px!important}
+body[data-page="about.html"] .section.about,body[data-page="about.html"] .section.values{padding-top:48px!important;padding-bottom:48px!important}
+body[data-page="about.html"] .final{padding-top:48px!important;padding-bottom:48px!important}
+body[data-page="contact.html"] .contact-coverage{padding-top:48px!important;padding-bottom:30px!important}
+body[data-page="contact.html"] .contact-layout,body[data-page="contact.html"] .booking-wrap{padding-top:46px!important;padding-bottom:46px!important}
+body[data-page="contact.html"] .coverage-types{margin-bottom:30px!important}
+}
+@media(max-width:700px){
+body[data-page="index.html"] .mobit-testimonials{padding-top:36px!important;padding-bottom:36px!important}
+body[data-page="products.html"] .solution-overview{padding-top:26px!important;padding-bottom:28px!important}
+body[data-page="projects.html"] .recent-solutions{padding-top:20px!important;padding-bottom:32px!important}
+body[data-page="projects.html"] .local-proof{margin-bottom:0!important}
+body[data-page="about.html"] .final{padding-top:36px!important;padding-bottom:36px!important}
+body[data-page="contact.html"] .contact-coverage{padding-top:36px!important;padding-bottom:26px!important}
+body[data-page="contact.html"] .coverage-types{margin-bottom:24px!important}
+}
