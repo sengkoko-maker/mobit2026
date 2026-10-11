@@ -121,3 +121,11 @@ body[data-page]:not([data-page="index.html"]):not([data-page="contact.html"]) .s
 .modern-header .modern-brand:before{transform:translateY(-50%)!important}
 @media(min-width:701px){.modern-hero{min-height:0!important;height:auto!important;max-height:none}.modern-hero .hero-copy{padding-top:32px!important;padding-bottom:32px!important}.modern-hero .proof{margin-top:24px!important}.solution-overview{padding-top:42px!important;padding-bottom:44px!important}.projects-page .recent-solutions{padding-top:28px!important}.projects-page .local-proof{margin-bottom:0!important}}
 @media(max-width:700px){.projects-page .recent-solutions{padding-top:22px!important}.projects-page .local-proof{margin-bottom:0!important}.solution-overview{padding-top:30px!important}}
+
+/* Contact coverage cards: compact desktop and mobile layout */
+body[data-page="contact.html"] .contact-coverage .coverage-grid{gap:18px!important;align-items:stretch}
+body[data-page="contact.html"] .contact-coverage .coverage-card{padding:24px 26px!important;min-height:0!important;height:auto!important;display:flex;flex-direction:column;justify-content:flex-start}
+body[data-page="contact.html"] .contact-coverage .coverage-card h2{margin:10px 0 12px!important;font-size:clamp(23px,2vw,30px);line-height:1.25}
+body[data-page="contact.html"] .contact-coverage .coverage-card p{line-height:1.55!important}
+body[data-page="contact.html"] .contact-coverage{padding-bottom:36px!important}
+@media(max-width:700px){body[data-page="contact.html"] .contact-coverage .coverage-grid{grid-template-columns:1fr!important;gap:14px!important}body[data-page="contact.html"] .contact-coverage .coverage-card{padding:20px!important}body[data-page="contact.html"] .contact-coverage .coverage-card h2{font-size:23px}}
