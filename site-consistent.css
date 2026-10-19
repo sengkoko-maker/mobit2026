@@ -154,3 +154,43 @@ body[data-page="about.html"] .final{padding-top:36px!important;padding-bottom:36
 body[data-page="contact.html"] .contact-coverage{padding-top:36px!important;padding-bottom:26px!important}
 body[data-page="contact.html"] .coverage-types{margin-bottom:24px!important}
 }
+
+/* October 2026: consistent compact rhythm across five main pages.
+   Preserve hero heights, existing grids, navigation and mobile readability. */
+@media(min-width:701px){
+body[data-page="index.html"] .modern-section,
+body[data-page="index.html"] .mobit-testimonials,
+body[data-page="products.html"] .solution-overview,
+body[data-page="products.html"] .product-section,
+body[data-page="products.html"] .service-process,
+body[data-page="projects.html"] .recent-solutions,
+body[data-page="about.html"] .section.about,
+body[data-page="about.html"] .section.values,
+body[data-page="about.html"] .final{
+padding-top:38px!important;padding-bottom:38px!important;
+}
+body[data-page="index.html"] .home-simple-cta{padding-top:34px!important;padding-bottom:34px!important}
+body[data-page="projects.html"] .recent-solutions{padding-top:28px!important}
+body[data-page="contact.html"] .contact-layout,
+body[data-page="contact.html"] .contact-coverage,
+body[data-page="contact.html"] .booking-wrap{padding-top:36px!important;padding-bottom:36px!important}
+body[data-page="index.html"] .section-head,
+body[data-page="index.html"] .heading,
+body[data-page="products.html"] .section-head,
+body[data-page="products.html"] .heading{margin-bottom:22px!important}
+}
+@media(max-width:700px){
+body[data-page="index.html"] .modern-section,
+body[data-page="index.html"] .mobit-testimonials,
+body[data-page="products.html"] .solution-overview,
+body[data-page="products.html"] .product-section,
+body[data-page="products.html"] .service-process,
+body[data-page="projects.html"] .recent-solutions,
+body[data-page="about.html"] .section.about,
+body[data-page="about.html"] .section.values,
+body[data-page="about.html"] .final{padding-top:28px!important;padding-bottom:28px!important}
+body[data-page="index.html"] .home-simple-cta{padding-top:28px!important;padding-bottom:28px!important}
+body[data-page="contact.html"] .contact-layout,
+body[data-page="contact.html"] .contact-coverage,
+body[data-page="contact.html"] .booking-wrap{padding-top:28px!important;padding-bottom:28px!important}
+}
