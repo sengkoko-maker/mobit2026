@@ -2,7 +2,7 @@
 .project-photos{
   display:grid;
   overflow:hidden;
-  background:#111 !important;
+  background:#eef3f8 !important;
   align-items:center;
   justify-items:center;
 }
@@ -12,7 +12,7 @@
   min-width:0;
   min-height:0;
   display:block;
-  object-fit:contain !important;
+  object-fit:cover !important;
   object-position:center !important;
 }
 .project-photos.recon-photos{
@@ -34,13 +34,14 @@
 }
 .project-photos.single-photo img{
   object-fit:contain !important;
+  background:#eef3f8 !important;
 }
 .project-photos.server-labelled{
   grid-template-columns:repeat(2,minmax(0,1fr)) !important;
   gap:3px;
-  background:#111 !important;
+  background:#eef3f8 !important;
 }
-.server-shot{position:relative;overflow:hidden;min-width:0;background:#111;}
+.server-shot{position:relative;overflow:hidden;min-width:0;background:#eef3f8;}
 .server-shot img{width:100%;height:100%;object-fit:contain !important;object-position:center !important;}
 .server-shot .label{position:absolute;z-index:3;padding:5px 9px;border-radius:6px;color:#fff;font:700 12px/1.1 Arial,sans-serif;box-shadow:0 2px 7px rgba(0,0,0,.28);letter-spacing:.02em;}
 .server-shot .label.rack{top:8px;left:8px;background:#e52b2b;border:2px solid #ff5b5b;}
@@ -69,3 +70,10 @@
   .server-shot .label.server{top:45%;right:4px}
   .projects-intro .eyebrow{margin-bottom:22px !important;padding:11px 14px !important;font-size:10px !important}
 }
+
+/* 2026-11: Show multi-photo project galleries without black gaps. */
+.project-photos.access-photos:has(img:nth-child(5)){
+  grid-template-columns:repeat(5,minmax(0,1fr)) !important;
+  grid-template-rows:1fr !important;
+}
+.project-photos img{background:#eef3f8 !important;}
