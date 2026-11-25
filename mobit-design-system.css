@@ -91,3 +91,9 @@ html body main .compact-hero .hero-copy .tech-line{font-size:20px!important;marg
 html body main .compact-hero .hero-copy .hero-actions,html body main .uniform-split-hero .actions{margin-top:8px!important}
 }
 @media(max-width:850px){html body[data-page] main :is(.compact-hero,.uniform-split-hero,.mobit-about-hero){height:auto!important;min-height:0!important;max-height:none!important;padding:16px!important;gap:12px!important}html body main :is(.uniform-hero-image,.mobit-about-office){height:200px!important;max-height:200px!important}}
+
+/* Compact hero media v7: preserve complete image, consistent proportions */
+html body[data-page] main :is(.uniform-split-hero,.mobit-about-hero) :is(.uniform-hero-image,.mobit-about-office){width:100%!important;max-width:441px!important;height:auto!important;min-height:0!important;max-height:248px!important;aspect-ratio:16/9!important;margin:0 auto!important;padding:0!important;border-radius:16px!important;overflow:hidden!important;background:transparent!important}
+html body[data-page] main :is(.uniform-split-hero,.mobit-about-hero) :is(.uniform-hero-image,.mobit-about-office) img{display:block!important;width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important}
+@media(min-width:851px){html body[data-page] main :is(.compact-hero,.uniform-split-hero,.mobit-about-hero){padding:16px 3%!important;gap:16px!important}}
+@media(max-width:850px){html body[data-page] main :is(.uniform-split-hero,.mobit-about-hero) :is(.uniform-hero-image,.mobit-about-office){max-width:356px!important;max-height:200px!important}}
