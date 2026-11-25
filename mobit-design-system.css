@@ -105,3 +105,8 @@ html body main .compact-hero .hero-copy h1 span{color:var(--mobit-red-light)!imp
 html body main :is(.section-head,.heading,.coverage-business-head) h2,html body main .solution-overview .overview-wrap>h2{border-inline-start:4px solid var(--mobit-red);padding-inline-start:10px}
 html body main .mobit-trust span:first-child{color:var(--mobit-red)!important}
 html body header nav a:is(.active,[aria-current="page"]){text-decoration:underline;text-decoration-color:var(--mobit-red);text-decoration-thickness:2px;text-underline-offset:6px}
+
+/* Compact product specification tags */
+html body main .product-card .mini-tags{display:flex!important;flex-wrap:wrap!important;gap:4px!important;padding:0!important;margin:6px 0 0!important;list-style:none!important}
+html body main .product-card .mini-tags li{font-size:12px!important;font-weight:500!important;line-height:1.3!important;padding:3px 8px!important;margin:0!important;border-radius:6px!important;background:#edf2f8!important;color:#53657c!important;max-width:100%!important;white-space:normal!important;min-height:0!important}
+@media(max-width:700px){html body main .product-card .mini-tags li{font-size:11px!important}}
