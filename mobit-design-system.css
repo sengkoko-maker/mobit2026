@@ -74,3 +74,20 @@ html body .modern-footer p{margin-block:4px!important}
 html body main .recent-solutions .project-grid .project-card .project-photos img{object-fit:cover!important}
 @media(min-width:1200px){html body main .recent-solutions .project-grid,html body main .product-section .visual-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}html body main .recent-solutions .project-grid .project-card,html body main .product-section .visual-card-grid .visual-card{grid-template-columns:minmax(0,38%) minmax(0,1fr)!important;align-items:center!important}}
 @media(max-width:700px){html body main :is(.section,.compact-section,.service-strip,.industries,.bottom-cta,.solution-overview,.service-process,.final,.recent-solutions,.contact-coverage){padding-block:12px!important}}
+
+/* Compact hero v6 — allow content to grow rather than clip */
+@media(min-width:851px){
+html body[data-page] main :is(.compact-hero,.uniform-split-hero,.mobit-about-hero),html body main :is(.compact-hero,.uniform-split-hero,.mobit-about-hero){height:auto!important;min-height:280px!important;max-height:none!important;padding:16px 5%!important;box-sizing:border-box!important;border-radius:20px!important;overflow:hidden!important;align-items:center!important;gap:20px!important}
+html body main .compact-hero .hero-layout{height:auto!important;min-height:248px!important;padding:0!important;gap:20px!important;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)!important}
+html body[data-page] main :is(.uniform-split-hero,.mobit-about-hero){grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)!important}
+html body[data-page] main :is(.compact-hero,.uniform-split-hero,.mobit-about-hero) h1,html body main :is(.compact-hero,.uniform-split-hero,.mobit-about-hero) h1 span{font-size:clamp(26px,2.6vw,36px)!important;line-height:1.1!important;margin-block:6px!important}
+html body main :is(.uniform-hero-image,.mobit-about-office){height:248px!important;min-height:0!important;max-height:248px!important;border-radius:16px!important}
+html body main :is(.uniform-hero-image,.mobit-about-office) img{width:100%!important;height:100%!important;object-fit:cover!important}
+html body main .compact-hero .hero-flow{height:248px!important;min-height:0!important;max-width:280px!important;margin:auto!important;border-radius:16px!important}
+html body main .compact-hero .hero-flow .flow-card{min-width:0!important;min-height:0!important;box-sizing:border-box!important}
+html body main .compact-hero .hero-flow .scene-art{max-height:44px!important}
+html body main .compact-hero .hero-flow .flow-result{font-size:9px!important}
+html body main .compact-hero .hero-copy .tech-line{font-size:20px!important;margin-block:6px!important}
+html body main .compact-hero .hero-copy .hero-actions,html body main .uniform-split-hero .actions{margin-top:8px!important}
+}
+@media(max-width:850px){html body[data-page] main :is(.compact-hero,.uniform-split-hero,.mobit-about-hero){height:auto!important;min-height:0!important;max-height:none!important;padding:16px!important;gap:12px!important}html body main :is(.uniform-hero-image,.mobit-about-office){height:200px!important;max-height:200px!important}}
