@@ -34,3 +34,6 @@ body main p:not(.eyebrow):not(.tech-line):not(.flow-result){line-height:1.5;marg
 body main :is(.compact-hero,.uniform-split-hero,.mobit-about-hero){margin-block:12px!important}
 body main :is(.compact-hero,.uniform-split-hero,.mobit-about-hero) p{margin-block:8px!important}
 @media(max-width:850px){body main :is(.section,.compact-section,.service-strip,.industries,.bottom-cta,.solution-overview,.service-process,.final,.modern-section,.recent-solutions,.contact-layout,.contact-coverage,.booking-wrap){padding-block:20px!important}body main :is(.three-grid,.page-grid,.project-grid,.value-grid,.coverage-grid,.contact-cards,.system-grid,.solution-grid,.proof-grid){gap:14px!important}}
+
+/* Consistent high-contrast hero eyebrow labels */
+html body :is(.compact-hero,.uniform-split-hero,.mobit-about-hero) .eyebrow{background:transparent!important;background-image:none!important;color:#ffc587!important;border:0!important;box-shadow:none!important;padding:0!important;border-radius:0!important;display:block!important;text-shadow:none!important;font-size:12px!important;font-weight:800!important;letter-spacing:1.2px!important;line-height:1.4!important}
