@@ -55,3 +55,22 @@ html body main :is(.compact-hero,.uniform-split-hero,.mobit-about-hero) :is(.her
 html body main :is(.compact-hero,.uniform-split-hero,.mobit-about-hero) :is(.hero-copy,.advisor-hero-copy,.mobit-about-copy) p:not(.eyebrow):not(.tech-line){font-size:16px!important;line-height:1.5!important}
 html body main :is(.btn,.hero-actions a,.actions a,.bottom-cta a){min-height:44px!important;font-size:14px!important;line-height:1.3!important;border-radius:10px!important}
 @media(max-width:700px){html body main :is(.product-section .visual-card-grid .card-photo,.recent-solutions .project-grid .project-photos){height:150px!important;max-height:150px!important}html body main :is(.product-card,.project-card,.core-card,.system-card,.detail-card,.value-card,.coverage-card,.contact-cards article,.simple-solutions article) :is(h2,h3){font-size:20px!important}}
+
+/* Compact layout v5: shared spacing, preserve readable type and touch targets */
+html body main :is(.section,.compact-section,.service-strip,.industries,.bottom-cta,.solution-overview,.service-process,.final,.modern-section,.recent-solutions,.contact-layout,.contact-coverage){padding-block:14px!important;margin-block:0!important}
+html body main :is(.heading,.section-head,.coverage-business-head){margin-bottom:10px!important;gap:10px!important}
+html body main :is(.heading,.section-head,.coverage-business-head) h2{margin-block:4px 6px!important}
+html body main :is(.three-grid,.page-grid,.project-grid,.value-grid,.coverage-grid,.contact-cards,.system-grid,.solution-grid,.proof-grid,.visual-card-grid,.simple-solutions,.founder-values,.tech-grid){gap:12px!important}
+html body main :is(.card-body,.project-copy,.simple-solutions article,.contact-cards article,.founder-values .value-card,.tech-card){padding:12px!important}
+html body main :is(.card-body,.project-copy,.simple-solutions article,.contact-cards article,.tech-card) p{margin-block:4px!important;line-height:1.45!important}
+html body main :is(.compact-hero,.uniform-split-hero,.mobit-about-hero){margin-block:8px!important}
+html body main .local-proof{margin-block:10px!important;padding:12px 16px!important}
+html body main .project-note{margin-block:8px!important}
+html body main .mobit-trust{margin-block:8px!important;padding-block:8px!important}
+html body main .simple-solutions{margin-block:10px!important}
+html body main .project-filters{margin-bottom:10px!important}
+html body .modern-footer{padding-block:16px!important;gap:12px!important}
+html body .modern-footer p{margin-block:4px!important}
+html body main .recent-solutions .project-grid .project-card .project-photos img{object-fit:cover!important}
+@media(min-width:1200px){html body main .recent-solutions .project-grid,html body main .product-section .visual-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}html body main .recent-solutions .project-grid .project-card,html body main .product-section .visual-card-grid .visual-card{grid-template-columns:minmax(0,38%) minmax(0,1fr)!important;align-items:center!important}}
+@media(max-width:700px){html body main :is(.section,.compact-section,.service-strip,.industries,.bottom-cta,.solution-overview,.service-process,.final,.recent-solutions,.contact-coverage){padding-block:12px!important}}
