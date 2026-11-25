@@ -37,3 +37,21 @@ body main :is(.compact-hero,.uniform-split-hero,.mobit-about-hero) p{margin-bloc
 
 /* Consistent high-contrast hero eyebrow labels */
 html body :is(.compact-hero,.uniform-split-hero,.mobit-about-hero) .eyebrow{background:transparent!important;background-image:none!important;color:#ffc587!important;border:0!important;box-shadow:none!important;padding:0!important;border-radius:0!important;display:block!important;text-shadow:none!important;font-size:12px!important;font-weight:800!important;letter-spacing:1.2px!important;line-height:1.4!important}
+
+/* Final shared consistency layer */
+html body{font-family:var(--mobit-font)!important;font-size:16px!important;line-height:1.5!important;color:var(--mobit-ink)}
+html body main :is(h1,h2,h3,h4,p,li,small,a,button){font-family:var(--mobit-font)!important}
+html body main :is(.product-card,.project-card,.core-card,.system-card,.detail-card,.value-card,.coverage-card,.contact-cards article,.simple-solutions article){border-radius:16px!important;border-color:#dce4ee!important}
+html body main :is(.product-card,.project-card,.core-card,.system-card,.detail-card,.value-card,.coverage-card,.contact-cards article,.simple-solutions article) :is(h2,h3){font-size:20px!important;line-height:1.3!important;letter-spacing:-.015em!important;color:var(--mobit-navy)!important;margin:0 0 8px!important}
+html body main :is(.product-card,.project-card,.core-card,.system-card,.detail-card,.value-card,.coverage-card,.contact-cards article,.simple-solutions article) :is(p,li){font-size:16px!important;line-height:1.5!important;color:var(--mobit-muted)!important}
+html body main :is(.product-card,.project-card,.contact-cards article,.simple-solutions article) :is(p){margin:8px 0!important}
+html body main :is(.card-body,.project-copy,.simple-solutions article,.contact-cards article,.founder-values .value-card){padding:16px!important}
+html body main :is(.project-copy>span,.contact-cards article>small,.eyebrow){font-size:12px!important;line-height:1.4!important;font-weight:800!important;letter-spacing:1.2px!important}
+html body main :is(.project-copy>span,.contact-cards article>small){color:var(--mobit-blue)!important}
+html body main :is(.product-section .visual-card-grid,.recent-solutions .project-grid,.simple-solutions,.founder-values,.contact-cards){gap:16px!important}
+html body main :is(.product-section .visual-card-grid .card-photo,.recent-solutions .project-grid .project-photos){height:180px!important;max-height:180px!important}
+html body main :is(.product-section .visual-card-grid .card-photo img,.recent-solutions .project-grid .project-photos img){object-fit:contain!important}
+html body main :is(.compact-hero,.uniform-split-hero,.mobit-about-hero) :is(.hero-copy,.advisor-hero-copy,.mobit-about-copy) h1{font-size:clamp(28px,2.8vw,42px)!important;line-height:1.1!important}
+html body main :is(.compact-hero,.uniform-split-hero,.mobit-about-hero) :is(.hero-copy,.advisor-hero-copy,.mobit-about-copy) p:not(.eyebrow):not(.tech-line){font-size:16px!important;line-height:1.5!important}
+html body main :is(.btn,.hero-actions a,.actions a,.bottom-cta a){min-height:44px!important;font-size:14px!important;line-height:1.3!important;border-radius:10px!important}
+@media(max-width:700px){html body main :is(.product-section .visual-card-grid .card-photo,.recent-solutions .project-grid .project-photos){height:150px!important;max-height:150px!important}html body main :is(.product-card,.project-card,.core-card,.system-card,.detail-card,.value-card,.coverage-card,.contact-cards article,.simple-solutions article) :is(h2,h3){font-size:20px!important}}
