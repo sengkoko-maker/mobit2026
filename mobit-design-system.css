@@ -132,3 +132,26 @@ html body[data-page] main :is(.uniform-split-hero,.mobit-about-hero) :is(.unifor
 @keyframes mobit-logo-breathe{0%,100%{filter:drop-shadow(0 0 2px #4387ce44)}50%{filter:drop-shadow(0 0 5px #4387ce99)}}
 @keyframes mobit-logo-shine{0%,65%{background-position:100% 0;opacity:0}70%{opacity:1}90%{background-position:0 0;opacity:1}100%{background-position:0 0;opacity:0}}
 @media(prefers-reduced-motion:reduce){.modern-brand .mobit-logo-motion img,.modern-brand .mobit-logo-motion::before,.modern-brand .mobit-logo-motion::after{animation:none!important}.modern-brand .mobit-logo-motion::after{display:none}}
+
+/* Premium corporate technology visual refinements */
+:root{--mobit-it:#17396d;--mobit-network:#008b9a;--mobit-security:#c62828}
+html body .modern-header{border-bottom:2px solid var(--mobit-security)!important}
+html body .header-tech-icons span:nth-child(2){color:var(--mobit-network)!important}
+html body main :is(.compact-hero,.uniform-split-hero,.mobit-about-hero){position:relative;isolation:isolate}
+html body main :is(.compact-hero,.uniform-split-hero,.mobit-about-hero)::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;border-radius:inherit;background-image:linear-gradient(#ffffff09 1px,transparent 1px),linear-gradient(90deg,#ffffff09 1px,transparent 1px),radial-gradient(ellipse at 90% 20%,#55aaff20,transparent 55%);background-size:24px 24px,24px 24px,100% 100%}
+html body main .tech-card:nth-child(1){--category:var(--mobit-it)}
+html body main .tech-card:nth-child(2){--category:var(--mobit-network)}
+html body main .tech-card:nth-child(3){--category:var(--mobit-security)}
+html body main :is(.tech-card,.product-card,.project-card){border-radius:12px!important;box-shadow:0 2px 10px #17396d0c!important;transition:transform .2s ease,box-shadow .2s ease}
+html body main .tech-card{border-top:3px solid var(--category)!important}
+html body main .tech-card :is(.num,h3){color:var(--category)!important}
+html body main .product-card[data-tech]{border-top:3px solid var(--category)!important}
+html body main [data-tech="it"]{--category:var(--mobit-it)}
+html body main [data-tech="network"]{--category:var(--mobit-network)}
+html body main [data-tech="security"]{--category:var(--mobit-security)}
+html body main .product-card[data-tech] .photo-icon{background:var(--category)!important;color:white!important}
+html body main .mobit-trust{background:#f0f4f9!important;border-radius:10px!important}
+html body main .mobit-trust span{display:flex;align-items:center;justify-content:center;gap:6px}
+html body main .mobit-trust svg{width:17px;height:17px;flex:none;stroke:var(--mobit-security);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+html body .modern-nav a,html body .header-tech-icons span,html body main .btn{transition:color .2s,background-color .2s,filter .2s}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){html body main :is(.tech-card,.product-card,.project-card):hover{transform:translateY(-3px);box-shadow:0 7px 18px #17396d18!important}html body main .project-photos img{transition:transform .25s ease}html body main .project-photos img:hover{transform:scale(1.025)}html body .header-tech-icons span:hover{filter:drop-shadow(0 0 3px #4899d655)}html body .modern-nav a:hover{text-decoration:underline;text-decoration-color:var(--mobit-security);text-underline-offset:6px}}
