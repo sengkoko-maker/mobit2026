@@ -97,3 +97,11 @@ html body[data-page] main :is(.uniform-split-hero,.mobit-about-hero) :is(.unifor
 html body[data-page] main :is(.uniform-split-hero,.mobit-about-hero) :is(.uniform-hero-image,.mobit-about-office) img{display:block!important;width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important}
 @media(min-width:851px){html body[data-page] main :is(.compact-hero,.uniform-split-hero,.mobit-about-hero){padding:16px 3%!important;gap:16px!important}}
 @media(max-width:850px){html body[data-page] main :is(.uniform-split-hero,.mobit-about-hero) :is(.uniform-hero-image,.mobit-about-office){max-width:356px!important;max-height:200px!important}}
+
+/* Corporate red accents */
+:root{--mobit-red:#c62828;--mobit-red-light:#ffb4b4}
+html body .header-tech-icons span:last-child{color:var(--mobit-red)!important}
+html body main .compact-hero .hero-copy h1 span{color:var(--mobit-red-light)!important}
+html body main :is(.section-head,.heading,.coverage-business-head) h2,html body main .solution-overview .overview-wrap>h2{border-inline-start:4px solid var(--mobit-red);padding-inline-start:10px}
+html body main .mobit-trust span:first-child{color:var(--mobit-red)!important}
+html body header nav a:is(.active,[aria-current="page"]){text-decoration:underline;text-decoration-color:var(--mobit-red);text-decoration-thickness:2px;text-underline-offset:6px}
