@@ -122,3 +122,13 @@ html body[data-page] main :is(.uniform-split-hero,.mobit-about-hero) > div:first
 html body[data-page] main :is(.uniform-split-hero,.mobit-about-hero) :is(.uniform-hero-image,.mobit-about-office){aspect-ratio:auto!important;height:auto!important;max-height:none!important;max-width:520px!important;border:0!important;justify-self:start!important;margin:0!important}
 html body[data-page] main :is(.uniform-split-hero,.mobit-about-hero) :is(.uniform-hero-image,.mobit-about-office) img{height:auto!important;max-height:248px!important;width:auto!important;max-width:100%!important;object-fit:contain!important;border-radius:16px!important;margin:auto!important}
 @media(max-width:850px){html body[data-page] main :is(.uniform-split-hero,.mobit-about-hero) :is(.uniform-hero-image,.mobit-about-office){justify-self:center!important;margin:auto!important;max-width:356px!important}html body[data-page] main :is(.uniform-split-hero,.mobit-about-hero) :is(.uniform-hero-image,.mobit-about-office) img{max-height:200px!important}}
+
+/* Animated brand emblem: stationary original artwork, independent ring and reflection */
+.modern-brand .mobit-logo-motion{position:relative;display:inline-grid!important;place-items:center;flex:0 0 auto;isolation:isolate;line-height:0;overflow:visible;border-radius:50%}
+.modern-brand .mobit-logo-motion img{display:block;position:relative;z-index:1;animation:mobit-logo-breathe 5s ease-in-out infinite}
+.modern-brand .mobit-logo-motion::before{content:"";position:absolute;inset:4%;border-radius:50%;z-index:2;pointer-events:none;background:conic-gradient(from 0deg,transparent 0deg,#fff5cf 35deg,transparent 80deg,transparent 210deg,#80bfff 245deg,transparent 290deg);mask:radial-gradient(farthest-side,transparent calc(100% - 2px),#000 calc(100% - 2px));animation:mobit-logo-ring 12s linear infinite}
+.modern-brand .mobit-logo-motion::after{content:"";position:absolute;inset:12%;border-radius:50%;z-index:3;pointer-events:none;background:linear-gradient(115deg,transparent 38%,rgba(255,255,255,.28) 49%,transparent 60%);background-size:300% 100%;animation:mobit-logo-shine 5s ease-in-out infinite}
+@keyframes mobit-logo-ring{to{transform:rotate(360deg)}}
+@keyframes mobit-logo-breathe{0%,100%{filter:drop-shadow(0 0 2px #4387ce44)}50%{filter:drop-shadow(0 0 5px #4387ce99)}}
+@keyframes mobit-logo-shine{0%,65%{background-position:100% 0;opacity:0}70%{opacity:1}90%{background-position:0 0;opacity:1}100%{background-position:0 0;opacity:0}}
+@media(prefers-reduced-motion:reduce){.modern-brand .mobit-logo-motion img,.modern-brand .mobit-logo-motion::before,.modern-brand .mobit-logo-motion::after{animation:none!important}.modern-brand .mobit-logo-motion::after{display:none}}
