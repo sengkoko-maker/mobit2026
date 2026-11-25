@@ -1,0 +1,24 @@
+/* Shared Mobit visual standards — main website pages */
+:root{--mobit-font:Arial,Helvetica,sans-serif;--mobit-navy:#071f4d;--mobit-blue:#1958a1;--mobit-orange:#f28c28;--mobit-ink:#14233b;--mobit-muted:#5f6e82;--mobit-soft:#f6f8fb;--mobit-gap:20px}
+html body{font-family:var(--mobit-font)!important;font-size:16px;line-height:1.6;color:var(--mobit-ink)}
+body button,body input,body select,body textarea{font-family:inherit}
+body main h2{font-family:inherit;font-size:30px!important;line-height:1.2!important;letter-spacing:-.025em!important}
+body main h3{font-family:inherit;font-size:22px!important;line-height:1.3!important;letter-spacing:-.015em!important}
+body main p:not(.eyebrow):not(.tech-line):not(.flow-result){font-size:16px;line-height:1.6}
+body main .eyebrow{font-size:12px!important;font-weight:800!important;line-height:1.4!important;letter-spacing:1.2px!important}
+body main :is(.compact-hero,.uniform-split-hero,.mobit-about-hero){background:linear-gradient(115deg,var(--mobit-navy),var(--mobit-blue))!important;border:0!important;border-radius:24px!important}
+body main :is(.compact-hero,.uniform-split-hero,.mobit-about-hero) h1{font-size:42px!important;line-height:1.1!important;letter-spacing:-.035em!important;color:#fff!important;margin:8px 0 14px!important}
+body main :is(.compact-hero,.uniform-split-hero,.mobit-about-hero) .eyebrow{color:#ffc587!important}
+body main :is(.compact-hero,.uniform-split-hero,.mobit-about-hero) :is(.advisor-hero-copy,.hero-copy,.mobit-about-copy){text-align:left!important}
+body main :is(.compact-hero,.uniform-split-hero,.mobit-about-hero) :is(.advisor-hero-copy,.hero-copy,.mobit-about-copy)>p:not(.eyebrow):not(.tech-line){font-size:16px!important;line-height:1.5!important;color:#e5effc!important;margin:8px 0!important}
+body main :is(.section,.compact-section,.service-strip,.industries,.bottom-cta,.solution-overview,.service-process,.final){padding-top:36px!important;padding-bottom:36px!important}
+body main :is(.heading,.section-head){margin-bottom:24px!important;gap:20px}
+body main :is(.three-grid,.page-grid,.project-grid,.value-grid,.coverage-grid,.contact-cards){gap:20px!important}
+body main :is(.system-card,.product-card,.detail-card,.value-card,.coverage-card,.project-card,.contact-cards article,.core-card){border-radius:16px!important}
+body main :is(.btn,.hero-actions a,.bottom-cta a){min-height:44px;box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;font-size:14px!important;line-height:1.3!important;padding:10px 16px!important;border-radius:10px!important;font-weight:700}
+body :is(.header,.modern-header){font-family:var(--mobit-font)!important}
+body :is(.nav,.modern-nav) a{font-size:14px!important;line-height:1.4!important}
+body main :is(input,select,textarea){font-size:16px;line-height:1.5}
+body main :is(input,select){min-height:44px}
+@media(min-width:851px){body main :is(.compact-hero,.uniform-split-hero,.mobit-about-hero){height:350px!important;min-height:350px!important;max-height:350px!important}body main .compact-hero .hero-copy h1{font-size:clamp(28px,2.8vw,42px)!important}body main .compact-hero .hero-copy .audience{font-size:14px!important}body main .compact-hero .hero-copy .tech-line{font-size:clamp(17px,1.6vw,24px)!important}}
+@media(max-width:850px){body main :is(.compact-hero,.uniform-split-hero,.mobit-about-hero){height:auto!important;min-height:0!important;max-height:none!important;border-radius:18px!important}body main :is(.compact-hero,.uniform-split-hero,.mobit-about-hero) h1{font-size:32px!important}body main h2{font-size:26px!important}body main h3{font-size:20px!important}body main :is(.section,.compact-section,.service-strip,.industries,.bottom-cta,.solution-overview,.service-process,.final){padding-top:28px!important;padding-bottom:28px!important}body main :is(.three-grid,.page-grid,.project-grid,.value-grid,.coverage-grid,.contact-cards){gap:14px!important}}
