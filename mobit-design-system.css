@@ -183,3 +183,19 @@ html body[data-page] main .compact-hero .hero-flow .flow-card strong{font-size:c
 html body[data-page] main .compact-hero .hero-flow .flow-card small{font-size:clamp(7px,2.25cqw,9px)!important;line-height:1.15!important}
 html body[data-page] main .compact-hero .hero-flow .flow-result{bottom:2%!important;font-size:clamp(7px,2.5cqw,10px)!important;max-width:94%!important}
 @media(max-width:850px){html body[data-page] main .compact-hero .hero-layout{grid-template-columns:minmax(0,1fr)!important;gap:20px!important}}
+
+/* Standard wide hero media, matching the Solutions reference proportions. */
+html body[data-page] main :is(.uniform-split-hero,.mobit-about-hero) :is(.uniform-hero-image,.mobit-about-office),html body[data-page] main .compact-hero .hero-flow{width:100%!important;max-width:650px!important;aspect-ratio:65/24!important;height:auto!important;min-height:0!important;max-height:none!important;border-radius:20px!important;margin:auto!important;justify-self:center!important}
+html body[data-page] main :is(.uniform-split-hero,.mobit-about-hero) :is(.uniform-hero-image,.mobit-about-office) img{width:100%!important;height:100%!important;max-height:none!important;object-fit:contain!important}
+html body[data-page] main .compact-hero .hero-flow .flow-card{width:23%!important;max-width:125px!important;padding:2%!important}
+html body[data-page] main .compact-hero .hero-flow>.flow-card{top:8%!important;left:50%!important}
+html body[data-page] main .compact-hero .hero-flow .flow-bottom .flow-card{top:30%!important}
+html body[data-page] main .compact-hero .hero-flow .flow-bottom .flow-card:first-child{left:7%!important}
+html body[data-page] main .compact-hero .hero-flow .flow-bottom .flow-card:last-child{right:7%!important}
+html body[data-page] main .compact-hero .hero-flow .network-cables{display:none!important}
+html body[data-page] main .compact-hero .hero-flow::before{display:block!important;inset:auto!important;top:47%!important;left:18%!important;width:64%!important;height:4px!important;border:0!important;border-radius:4px!important;background:linear-gradient(90deg,#2799db,#b4eaff,#2799db);background-size:200% 100%;animation:mobit-wide-cable 3s linear infinite;z-index:1!important}
+@keyframes mobit-wide-cable{to{background-position:200% 0}}
+html body[data-page] main .compact-hero .hero-flow .flow-result{bottom:3%!important}
+@media(min-width:851px){html body[data-page] main :is(.uniform-split-hero,.mobit-about-hero),html body[data-page] main .compact-hero .hero-layout{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;max-width:1400px!important;gap:32px!important}}
+@media(max-width:850px){html body[data-page] main .compact-hero .hero-flow{aspect-ratio:500/420!important;max-width:340px!important}html body[data-page] main .compact-hero .hero-flow .flow-card{width:34%!important}html body[data-page] main .compact-hero .hero-flow>.flow-card{top:2%!important}html body[data-page] main .compact-hero .hero-flow .flow-bottom .flow-card{top:53%!important}html body[data-page] main .compact-hero .hero-flow .network-cables{display:block!important}html body[data-page] main .compact-hero .hero-flow::before{display:none!important}}
+@media(prefers-reduced-motion:reduce){html body[data-page] main .compact-hero .hero-flow::before{animation:none!important}}
