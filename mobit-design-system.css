@@ -167,3 +167,19 @@ html body[data-page] main .compact-hero .hero-flow .flow-card small{font-size:8p
 html body[data-page] main .compact-hero .hero-flow .scene-art{height:29%!important;max-height:30px!important}
 html body[data-page] main .compact-hero .hero-flow .flow-result{bottom:6px!important;font-size:9px!important;max-width:94%!important}
 }
+
+/* Responsive connected diagram: preserve the cable SVG coordinate system. */
+html body[data-page] main .compact-hero .hero-layout{display:grid!important;grid-template-columns:minmax(0,55fr) minmax(0,45fr)!important;gap:32px!important;align-items:center!important}
+html body[data-page] main .compact-hero .hero-copy{min-width:0!important;max-width:100%!important;overflow-wrap:anywhere}
+html body[data-page] main .compact-hero .hero-flow{width:100%!important;max-width:340px!important;height:auto!important;aspect-ratio:500/420!important;min-height:0!important;position:relative!important;container-type:inline-size;justify-self:center!important;padding:0!important}
+html body[data-page] main .compact-hero .hero-flow .network-cables{inset:0!important;width:100%!important;height:100%!important}
+html body[data-page] main .compact-hero .hero-flow .flow-card{width:34%!important;max-width:none!important;height:auto!important;aspect-ratio:1!important;padding:3%!important;gap:0!important}
+html body[data-page] main .compact-hero .hero-flow>.flow-card{top:2%!important;left:50%!important;transform:translateX(-50%)!important}
+html body[data-page] main .compact-hero .hero-flow .flow-bottom .flow-card{top:53%!important}
+html body[data-page] main .compact-hero .hero-flow .flow-bottom .flow-card:first-child{left:5%!important}
+html body[data-page] main .compact-hero .hero-flow .flow-bottom .flow-card:last-child{right:5%!important}
+html body[data-page] main .compact-hero .hero-flow .scene-art{height:30%!important;max-height:none!important}
+html body[data-page] main .compact-hero .hero-flow .flow-card strong{font-size:clamp(10px,3.6cqw,14px)!important}
+html body[data-page] main .compact-hero .hero-flow .flow-card small{font-size:clamp(7px,2.25cqw,9px)!important;line-height:1.15!important}
+html body[data-page] main .compact-hero .hero-flow .flow-result{bottom:2%!important;font-size:clamp(7px,2.5cqw,10px)!important;max-width:94%!important}
+@media(max-width:850px){html body[data-page] main .compact-hero .hero-layout{grid-template-columns:minmax(0,1fr)!important;gap:20px!important}}
